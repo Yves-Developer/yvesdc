@@ -3,9 +3,9 @@
 import { createClient } from 'contentful';
 
 const client = createClient({
-  space: process.env.SPACE_ID,
+  space: "laef1csaxq5g",
   environment: 'master', // defaults to 'master' if not set
-  accessToken: process.env.ACCESS_TOKEN,
+  accessToken: "LwT9I5bppN4KJ-61LzyzSinuf0kYRcjViKvmAeNPfMI",
 });
 
 export async function GET() {
