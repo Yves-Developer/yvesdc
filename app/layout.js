@@ -1,3 +1,4 @@
+/** @format */
 
 import Navbar from "@/components/Navbar";
 import "./globals.css";
@@ -13,9 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
-        <main className="container mx-auto py-8 px-4">
-         {children} 
-        </main>
+        {children}
         <Footer />
       </body>
     </html>

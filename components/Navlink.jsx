@@ -1,14 +1,16 @@
-'use client';
-import Link from 'next/link';
-
-
-const Navlink = ({ href, title }) => {
-
+/** @format */
+"use client";
+import Link from "next/link";
+function NavLink({ href, title, onClick }) {
   return (
-    <Link href={href} className={`px-4 py-2 text-primary hover:text-gray-300`}>
-        {title}
+    <Link
+      href={href}
+      className="relative text-foreground/60 transition-colors hover:text-foreground/80 px-4 py-2"
+      onClick={onClick}
+    >
+      {title}
     </Link>
   );
-};
+}
 
-export default Navlink;
+export default NavLink;

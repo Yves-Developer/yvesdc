@@ -1,50 +1,67 @@
-'use client';
-import React, { useState } from 'react';
-import Navlink from './Navlink';
-import { Button } from './ui/button';
-import Link from 'next/link';
+/** @format */
 
-const Navbar = () => {
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import NavLink from "./Navlink";
+import { DialogTitle } from "@radix-ui/react-dialog";
+const navItems = [
+  { href: "#Home", title: "Home" },
+  { href: "#Projects", title: "Projects" },
+  { href: "#About", title: "About" },
+];
+
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <nav className="container absolute z-10 mx-auto px-4 w-full h-[60px] flex items-center justify-between">
-      {/* Logo */}
-      <div className="ml-24 text-primary font-bold">
-        Yves<span className="text-xl">.</span>
-      </div>
+    <nav className="w-full max-w-screen-xl mx-auto left-0 right-0 fixed top-0 z-50 bg-background/80 backdrop-blur-sm">
+      <div className="flex items-center justify-between p-4">
+        {/* Logo */}
+        <Link href="/" className="text-2xl font-bold text-primary">
+          Yves<span className="text-3xl">.</span>
+        </Link>
 
-      {/* Hamburger Menu for Mobile */}
-      <button
-        aria-label="Toggle Menu"
-        className="text-primary md:hidden"
-        onClick={toggleMenu}
-      >
-        {isOpen ? '✖' : '☰'}
-      </button>
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-4">
+          {navItems.map((item) => (
+            <NavLink key={item.href} href={item.href} title={item.title} />
+          ))}
+          <Button asChild>
+            <Link href="#contact">Contact Us</Link>
+          </Button>
+        </div>
 
-      {/* Navigation Links */}
-      <div
-        className={`${
-          isOpen ? 'flex' : 'hidden'
-        } md:flex flex-col md:flex-row md:items-center md:justify-center absolute md:relative md:top-0 top-16 left-0 w-full md:w-auto bg-white md:bg-transparent space-y-4 md:space-y-0 md:space-x-4 shadow md:shadow-none p-4 md:p-0 z-10`}
-      >
-        <Navlink href="#Home" title="Home" />
-        <Navlink href="#Projects" title="Project" />
-        <Navlink href="#About" title="About" />
-       <Button variant="ghost" className="lg:hidden" asChild><Link href="#contact">Conatct Us</Link></Button>
-      </div>
-
-      {/* Contact Us */}
-      <div className="text-primary hidden lg:block">
-      <Button variant="ghost" asChild><Link href="#contact">Conatct Us</Link></Button>
+        {/* Mobile Navigation */}
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <DialogTitle />
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon" className="md:hidden">
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Toggle menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <nav className="flex flex-col space-y-4 mt-8">
+              {navItems.map((item) => (
+                <NavLink
+                  key={item.href}
+                  href={item.href}
+                  title={item.title}
+                  onClick={() => setIsOpen(false)}
+                />
+              ))}
+              <Button asChild onClick={() => setIsOpen(false)}>
+                <Link href="#contact">Contact Us</Link>
+              </Button>
+            </nav>
+          </SheetContent>
+        </Sheet>
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}

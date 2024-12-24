@@ -1,20 +1,19 @@
-import Contact from '@/components/contact'
-import Hero from '@/components/Hero'
-import Projects from '@/components/Projects'
-import CareerRoadmap from '@/components/Roadmap'
+/** @format */
 
+import Contact from "@/components/contact";
+import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
+import CareerRoadmap from "@/components/Roadmap";
 
-const Home
- = () => {
+const Home = () => {
   return (
-    <>
-    <Hero />
-    <Projects />
-    <CareerRoadmap />
-    <Contact />
-    </>
-  )
-}
+    <main className="w-full max-w-screen-xl mx-auto py-8 px-4">
+      <Hero />
+      <Projects />
+      <CareerRoadmap />
+      <Contact />
+    </main>
+  );
+};
 
-export default Home
-
+export default Home;
