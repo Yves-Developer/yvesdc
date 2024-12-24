@@ -1,5 +1,4 @@
 /** @format */
-"use client";
 import Link from "next/link";
 function NavLink({ href, title, onClick }) {
   return (

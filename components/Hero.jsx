@@ -46,10 +46,10 @@ const Hero = () => {
         {/* Right Section */}
         <div className="relative aspect-square w-full max-w-[500px] mx-auto">
           <Image
-            src="/placeholder.svg"
+            src="/herox.png"
             alt="Hero illustration"
             fill
-            className="object-cover rounded-2xl shadow-2xl"
+            className="object-cover rounded-lg"
             priority
           />
         </div>
