@@ -26,12 +26,13 @@ const Hero = () => {
             digital experiences together.
           </p>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button
+            <a
+              href="/Resume.pdf"
+              download="MUGISHA_Yves_Resume.pdf"
               className="group transition-all duration-300 hover:scale-105"
-              size="lg"
             >
-              Download CV
-            </Button>
+              <Button size="lg">Download CV</Button>
+            </a>
             <Button
               variant="outline"
               size="lg"
