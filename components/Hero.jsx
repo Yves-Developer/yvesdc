@@ -48,7 +48,7 @@ const Hero = () => {
         <div class="mt-16 flow-root relative w-full max-w-[500px]">
         <div class="-m-2 rounded-xl bg-ray-900/5 p-2 ring-1 ring-inset ring-gray-900/10">
           <Image
-            src="/herox.png"
+            src="/Herox.png"
             alt="Hero illustration"
             width={1280}
             height={720}
