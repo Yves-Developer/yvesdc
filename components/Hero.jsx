@@ -50,7 +50,8 @@ const Hero = () => {
           <Image
             src="/herox.png"
             alt="Hero illustration"
-            fill
+            width={1280}
+            height={720}
             class="object-cover shadow rounded-lg ring-1 ring-gray-900/10"
             quality="100"
           />
