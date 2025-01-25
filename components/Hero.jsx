@@ -45,15 +45,15 @@ const Hero = () => {
         </div>
 
         {/* Right Section */}
-        <div className="relative aspect-square w-full max-w-[500px] mx-auto">
+<div class="relative w-full max-w-[500px] mx-auto -m-2 rounded-xl bg-ray-900/5 p-2 ring-1 ring-inset ring-gray-900/10">
           <Image
             src="/herox.png"
             alt="Hero illustration"
             fill
-            className="object-cover rounded-lg"
-            priority
+            class="object-cover shadow rounded-lg ring-1 ring-gray-900/10"
+            quality="100"
           />
-        </div>
+</div>
       </div>
     </section>
   );
