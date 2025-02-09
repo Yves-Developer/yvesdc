@@ -25,7 +25,7 @@ Features collections of stunning Web development projects built with one or more
 18. CMS: `Sanity` `ContentFull`
 19. And So Forth
     
-``
+---
 ## Fovorate Lines of Code
 ``` javascript
 
