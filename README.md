@@ -1,5 +1,9 @@
 # Yves DC Portfolio Website
 
+## Portfolio Tech Stack And Technology
+
+`NextJs` `Tailwindcss` `HTML5` `NodeJs` `CMS: Contentful` 
+
 Features collections of stunning Web development projects built with one or more of the following TechStack and Technologies.
 1. HTML5
 2. CSS3
@@ -20,12 +24,9 @@ Features collections of stunning Web development projects built with one or more
 17. Clert Auth
 18. CMS: `Sanity` `ContentFull`
 19. And So Forth
---
-
-## Portfolio Tech Stack And Technology
-`NextJs` `Tailwindcss` `HTML5` `NodeJs` `CMS: Contentful` 
-
-## Fovorate Line of Code
+    
+``
+## Fovorate Lines of Code
 ``` javascript
 
 /* :: Server.js * Entry Point
@@ -83,6 +84,6 @@ export default router;
 
 ## Feel Free to Connect
 
-Social Meadia: [https://yvesdc.vercel.app](Links)
+Social Meadia: [Links](https://yvesdc.vercel.app)
 
 
