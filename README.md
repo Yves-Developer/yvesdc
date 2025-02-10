@@ -84,6 +84,6 @@ export default router;
 
 ## Feel Free to Connect
 
-Social Meadia: [Links](https://yvesdc.vercel.app)
+Social Meadia: [Links](https://yvesdc.vercel.app/#contact)
 
 
