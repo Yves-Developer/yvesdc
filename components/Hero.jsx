@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 const Hero = () => {
   return (
-    <section className="relative py-20" id="Home">
+    <section className="relative py-20 mx-auto container lg:max-w-5xl" id="Home">
       {/* Decorative Shapes */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-[10rem] left-10 w-32 h-32 bg-blue-600 blur-2xl opacity-30 rounded-full"></div>
@@ -82,7 +82,7 @@ const Hero = () => {
         <div className="mt-16 flow-root relative w-full max-w-[500px]">
           <div className="-m-2 rounded-xl bg-ray-900/5 p-2 ring-1 ring-inset ring-gray-900/10">
             <Image
-              src="/Herox.png"
+              src="/Herox.jpg"
               alt="Hero illustration"
               width={1280}
               height={720}
