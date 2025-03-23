@@ -40,7 +40,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="Projects" className="py-20 px-4 md:px-6 lg:px-8">
+    <section id="Projects" className="py-20 px-4 container mx-auto md:px-6 lg:px-8 xl:max-w-5xl">
       <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">My Projects</h2>
       
       {loading ? (
