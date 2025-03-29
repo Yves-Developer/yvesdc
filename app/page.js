@@ -13,10 +13,13 @@ const Home = () => {
       <div className="w-32 h-full hidden xl:inline-flex fixed bottom-0 left-0">
         <LeftSide />
       </div>
+      <div className="h-[88vh] mx-auto p-4">
+        <Hero />
+      </div>
       <div className="w-32 h-full hidden xl:inline-flex fixed bottom-0 right-0">
         <RightSide />
       </div>
-      {/* <Hero />
+      {/* 
       <Projects />
       <CareerRoadmap />
       <Contact /> */}
