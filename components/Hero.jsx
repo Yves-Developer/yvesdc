@@ -6,7 +6,7 @@ import Image from "next/image";
 import CountUp from "react-countup";
 const Hero = () => {
   return (
-    <section className="relative py-20 mx-auto max-w-[1140px]" id="Home">
+    <section className="relative mx-auto max-w-[1140px]" id="Home">
       {/* Decorative Shapes */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-[10rem] left-10 w-32 h-32 bg-blue-600 blur-2xl opacity-30 rounded-full"></div>
@@ -46,7 +46,7 @@ const Hero = () => {
             </Button>
           </div>
           {/* Count-up Section */}
-          <div className="py-10 flex gap-10" id="counter">
+          <div className="py-10 flex gap-5 sm:gap-10" id="counter">
             <div className=" flex flex-col gap-2 w-1/2 bg-transparent ring-1 ring-textDark p-4 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-textDark">Projects</h3>
               <p className="text-3xl font-bold text-textLight">

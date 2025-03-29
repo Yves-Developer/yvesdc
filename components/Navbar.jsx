@@ -57,7 +57,7 @@ export default function Navbar() {
         <Sheet className="md:hidden" open={isOpen} onOpenChange={setIsOpen}>
           <DialogTitle />
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden">
+            <Button variant="outline" size="icon" className="md:hidden">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle menu</span>
             </Button>
