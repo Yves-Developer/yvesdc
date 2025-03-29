@@ -1,13 +1,20 @@
 /** @format */
 import Link from "next/link";
-function NavLink({ href, title, onClick }) {
+import { motion } from "framer-motion";
+function NavLink({ href, title, onClick, index }) {
   return (
     <Link
       href={href}
-      className="relative text-foreground/60 transition-colors hover:text-foreground/80 px-4 py-2"
+      className="relative text-textDark transition-colors hover:text-primary font-medium px-4 py-2"
       onClick={onClick}
     >
-      {title}
+      <motion.div
+        initial={{ y: -10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.1, delay: index * 0.1 }}
+      >
+        {title}
+      </motion.div>
     </Link>
   );
 }
