@@ -6,6 +6,7 @@ import LeftSide from "@/components/LeftSide";
 import Projects from "@/components/Projects";
 import RightSide from "@/components/RightSide";
 import CareerRoadmap from "@/components/Roadmap";
+import Work from "@/components/Work";
 
 const Home = () => {
   return (
@@ -15,12 +16,14 @@ const Home = () => {
       </div>
       <div className="h-[88vh] mx-auto p-4">
         <Hero />
+        <Projects />
+        <Work />
       </div>
       <div className="w-32 h-full hidden xl:inline-flex fixed bottom-0 right-0">
         <RightSide />
       </div>
       {/* 
-      <Projects />
+      
       <CareerRoadmap />
       <Contact /> */}
     </main>
