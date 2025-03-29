@@ -76,9 +76,7 @@ export default function Projects() {
                 />
                 <div className="flex flex-wrap gap-2 mt-4">
                   {project.fields.techStack.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="primary">
-                      {tech}
-                    </Badge>
+                    <Badge key={techIndex}>{tech}</Badge>
                   ))}
                 </div>
               </CardContent>
