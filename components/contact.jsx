@@ -34,7 +34,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 px-4 md:px-6 lg:px-8 bg-secondary/20 relative"
+      className="py-20 rounded-sm px-4 md:px-6 lg:px-8 bg-[#112240] relative"
     >
       <div className="max-w-4xl mx-auto">
         {/* Decorative Shapes */}
@@ -62,7 +62,7 @@ export default function Contact() {
                 <link.icon className="w-6 h-6" />
                 <div className="text-left">
                   <div className="font-semibold">{link.name}</div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-sm text-textDark">
                     {link.description}
                   </div>
                 </div>

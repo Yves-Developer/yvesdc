@@ -33,7 +33,7 @@ const Timeline = React.forwardRef(
         aria-label="Timeline"
         className={cn(
           timelineVariants({ size }),
-          "relative min-h-[600px] w-full max-w-2xl mx-auto py-8",
+          "relative min-h-[600px] w-full max-w-3xl mx-auto py-8",
           className
         )}
         {...props}
@@ -99,10 +99,10 @@ const TimelineItem = React.forwardRef(
 
             <div className="mx-3 flex flex-col items-center justify-start gap-y-2">
               <div className="relative flex h-8 w-8 animate-pulse items-center justify-center rounded-full bg-muted ring-8 ring-background">
-                <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
+                <Loader2 className="h-4 w-4 animate-spin text-textDark" />
               </div>
               {showConnector && (
-                <div className="h-full w-0.5 animate-pulse bg-muted" />
+                <div className="h-full w-0.5 animate-pulse bg-textLight" />
               )}
             </div>
 
@@ -132,7 +132,7 @@ const TimelineItem = React.forwardRef(
         >
           <div className="grid grid-cols-[minmax(auto,8rem)_auto_1fr] items-start px-4">
             <div className="pr-4 text-right">
-              <TimelineTime className="text-destructive">{date}</TimelineTime>
+              <TimelineTime className="text-textDark">{date}</TimelineTime>
             </div>
 
             <div className="mx-3 flex flex-col items-center justify-start gap-y-2">
@@ -240,7 +240,7 @@ const TimelineTime = React.forwardRef(
         ref={ref}
         dateTime={date ? new Date(date).toISOString() : undefined}
         className={cn(
-          "text-sm font-medium tracking-tight text-muted-foreground",
+          "text-sm font-medium tracking-tight text-textDark",
           className
         )}
         {...props}
@@ -353,7 +353,7 @@ const TimelineIcon = ({
 const TimelineDescription = React.forwardRef(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("max-w-sm text-sm text-muted-foreground", className)}
+    className={cn("max-w-sm text-sm text-textLight", className)}
     {...props}
   />
 ));

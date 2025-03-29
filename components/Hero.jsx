@@ -16,11 +16,13 @@ const Hero = () => {
       <div className="flex flex-col-reverse lg:flex-row items-center px-6 gap-12">
         {/* Left Section */}
         <div>
-          <h2 className="text-lg font-medium text-primary mb-2">Hello,</h2>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="max-sm:text-center text-lg font-medium text-primary mb-2">
+            Hello,
+          </h2>
+          <h1 className="max-sm:text-center text-4xl md:text-5xl font-bold mb-6">
             I'm MUGISHA Yves.
           </h1>
-          <p className="pr-[100px] md:max-w-[650px] font-medium text-base text-textDark mb-8">
+          <p className="max-sm:text-center md:max-w-[650px] font-medium text-base text-textDark mb-8">
             I specialize in web development with HTML, CSS, JavaScript, ReactJS,
             NextJS, TailwindCSS, NodeJS, and SQL. Let's create innovative
             digital experiences together.

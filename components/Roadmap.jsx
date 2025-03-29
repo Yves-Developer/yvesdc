@@ -11,6 +11,7 @@ import {
   Check,
 } from "lucide-react";
 import TimelineLayout from "./timeline-layout";
+import Header from "./Header";
 
 // const roadmapSteps = [
 //   {
@@ -97,10 +98,8 @@ const roadmapSteps = [
 
 export default function CareerRoadmap() {
   return (
-    <div className="container mx-auto px-4 py-8" id="About">
-      <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
-        My Journey.
-      </h1>
+    <div className="w-full max-w-[756px] mx-auto px-4 py-8" id="About">
+      <Header title="My Journey" />
       <TimelineLayout
         items={roadmapSteps}
         size="sm"

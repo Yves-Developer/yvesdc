@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import { useState, useEffect } from "react";
 import Header from "./Header";
+import { Loader, Loader2 } from "lucide-react";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]); // State to store Contentful projects
@@ -54,17 +55,12 @@ export default function Projects() {
       {/* Header */}
       <Header title="My Projects" />
       {loading ? (
-        <div className="text-center">Loading...</div> // Show a loading indicator while fetching data
+        <Loader2 className="text-center animate-spin" /> // Show a loading indicator while fetching data
       ) : (
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.slice(0, visibleProjects).map((project, index) => (
             <Card key={project.sys.id} className="flex flex-col">
-              <CardHeader>
-                <CardTitle className="text-lg font-semibold text-textLight">
-                  {project.fields.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow">
+              <CardContent className="flex-grow py-4">
                 <Image
                   src={`https:${project.fields.image.fields.file.url}`}
                   alt={
@@ -74,6 +70,9 @@ export default function Projects() {
                   height={200}
                   className="w-full h-48 object-cover mb-4 rounded-md"
                 />
+                <h2 className="text-lg font-semibold text-textLight">
+                  {project.fields.title}
+                </h2>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {project.fields.techStack.map((tech, techIndex) => (
                     <Badge key={techIndex}>{tech}</Badge>
