@@ -45,9 +45,9 @@ const Hero = () => {
           </div>
           {/* Count-up Section */}
           <div className="py-10 flex gap-10" id="counter">
-            <div className="w-1/2 bg-transparent ring-1 ring-zinc-400 p-4 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-zinc-800">Projects</h3>
-              <p className="text-3xl font-bold text-zinc-800">
+            <div className=" flex flex-col gap-2 w-1/2 bg-transparent ring-1 ring-textDark p-4 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-textDark">Projects</h3>
+              <p className="text-3xl font-bold text-textLight">
                 <CountUp
                   start={0}
                   end={20}
@@ -56,37 +56,42 @@ const Hero = () => {
                   suffix="+"
                 />
               </p>
-              <p className="text-sm text-zinc-600">Completed</p>
+              <p className="w-fit text-sm text-primary bg-primary/20 inline-flex flex-col justify-center items-center py-1 px-2 rounded-full">
+                Completed
+              </p>
             </div>
-            <div className="w-1/2 bg-transparent ring-1 ring-zinc-400 p-4 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-zinc-800">
+            <div className=" flex flex-col gap-2 w-1/2 bg-transparent ring-1 ring-textDark p-4 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-textDark">
                 Github Commits
               </h3>
-              <p className="text-3xl font-bold text-zinc-800">
+              <p className="text-3xl font-bold text-textLight">
                 <CountUp
                   start={0}
-                  end={250}
+                  end={310}
                   duration={2}
                   separator=","
                   suffix="+"
                 />
               </p>
-              <p className="text-sm text-zinc-600">Successfull</p>
+              <p className="w-fit text-sm text-primary bg-primary/20 inline-flex flex-col justify-center items-center py-1 px-2 rounded-full">
+                committed
+              </p>
             </div>
           </div>
         </div>
 
         {/* Right Section */}
         <div className="mt-16 flow-root relative w-full max-w-[500px]">
-          <div className="-m-2 rounded-xl bg-ray-900/5 p-2 ring-1 ring-inset ring-gray-900/10">
+          <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-primary/10">
             <Image
               src="/Herox.jpg"
               alt="Hero illustration"
               width={1280}
               height={720}
-              className="object-cover shadow rounded-lg ring-1 ring-gray-900/10"
+              className="object-cover shadow rounded-lg ring-1 ring-primary/10"
               quality="100"
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/30 to-background rounded-lg"></div>
           </div>
         </div>
       </div>
