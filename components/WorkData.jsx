@@ -16,17 +16,21 @@ const WorkData = ({ company, title }) => {
       <ul className="mt-6">
         <li className="mt-1 flex items-center gap-4 text-textDark text-base">
           <CornerUpRight size="30px" className="text-primary" />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ullam
-          voluptatibus reiciendis, nihil ex inventore, dolore facere nemo natus
-          sit perspiciatis illo? Eum minus provident corrupti modi aperiam
-          eveniet laboriosam?
+          Built and deployed full-stack web applications using MERN & PERN
+          stacks.
         </li>
         <li className="mt-1 flex items-center gap-4 text-textDark text-base">
           <CornerUpRight size="30px" className="text-primary" />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ullam
-          voluptatibus reiciendis, nihil ex inventore, dolore facere nemo natus
-          sit perspiciatis illo? Eum minus provident corrupti modi aperiam
-          eveniet laboriosam?
+          Developed custom landing pages with Next.js and MailerLite for lead
+          generation.
+        </li>
+        <li className="mt-1 flex items-center gap-4 text-textDark text-base">
+          <CornerUpRight size="30px" className="text-primary" />
+          Created an Electron-based screen recording & video editing app.
+        </li>
+        <li className="mt-1 flex items-center gap-4 text-textDark text-base">
+          <CornerUpRight size="30px" className="text-primary" />
+          Next.js Blog with Strapi CMS – Optimized for SEO.
         </li>
       </ul>
     </motion.div>

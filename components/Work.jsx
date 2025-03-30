@@ -47,7 +47,9 @@ const Work = () => {
             Upstash
           </li>
         </ul>
-        {isGoogle && <WorkData title="Software Engineer" company="Google" />}
+        {isGoogle && (
+          <WorkData title="FullStack Web Developer" company="Self-Employed" />
+        )}
         {isPixel && <WorkData title="FullStack developer" company="pixel" />}
         {isUpstash && <WorkData title="Software Engineer" company="Upstash" />}
       </div>
