@@ -1,6 +1,8 @@
 /** @format */
 
+import Certificates from "@/components/Certificates";
 import Contact from "@/components/contact";
+import FeaturedProject from "@/components/FeaturedProject";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import LeftSide from "@/components/LeftSide";
@@ -17,9 +19,11 @@ const Home = () => {
       </div>
       <div className="h-[90vh] mx-auto p-4">
         <Hero />
+        <FeaturedProject />
         <Projects />
+        <Certificates />
         <Work />
-        <CareerRoadmap />
+        {/* <CareerRoadmap /> */}
         <Contact />
         <Footer />
       </div>

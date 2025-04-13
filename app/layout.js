@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import "./globals.css";
+import DataProvider from "@/context/DataProvider";
 export const metadata = {
   title: "Yves DC, Portfolio Websites - 2024",
   description: "All made projects from 2021",
@@ -12,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
-        {children}
+        <DataProvider>{children}</DataProvider>
       </body>
     </html>
   );

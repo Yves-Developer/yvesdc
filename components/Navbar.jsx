@@ -12,8 +12,10 @@ import NavLink from "./Navlink";
 import { DialogTitle } from "@radix-ui/react-dialog";
 const navItems = [
   { href: "#Home", title: "Home" },
+  { href: "#Featured", title: "Featured" },
   { href: "#Projects", title: "Projects" },
-  { href: "#About", title: "About" },
+  { href: "#Certs", title: "Certs" },
+  { href: "https://github.com/Yves-Developer", title: "About" },
 ];
 
 export default function Navbar() {
@@ -41,6 +43,7 @@ export default function Navbar() {
               index={index}
               href={item.href}
               title={item.title}
+              target={item.title === "About" ? "_blank" : undefined}
             />
           ))}
           <motion.div
