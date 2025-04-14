@@ -1,6 +1,6 @@
 /** @format */
 
-import { Mail, Github, Facebook, Instagram } from "lucide-react";
+import { Mail, Github, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const contactLinks = [
@@ -17,9 +17,9 @@ const contactLinks = [
     description: "Collaborate with me",
   },
   {
-    name: "Facebook",
-    icon: Facebook,
-    href: "https://www.facebook.com/yves.mugisha.908",
+    name: "LinkedIn",
+    icon: Linkedin,
+    href: "https://linkedin.com/in/yvesdc",
     description: "Connect on social media",
   },
   {
