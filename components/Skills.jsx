@@ -19,7 +19,7 @@ const mainSkills = [
   { skill: "Sequelize", percent: 70 },
   { skill: "REST APIs", percent: 85 },
   { skill: "Git & GitHub", percent: 90 },
-  { skill: "React Native", percent: 75 },
+  { skill: "React Native", percent: 60 },
 ];
 const Skills = () => {
   const [numberPerPage, setNumberPerPage] = useState(8);
