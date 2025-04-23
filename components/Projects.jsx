@@ -2,27 +2,13 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect, useContext } from "react";
 import Header from "./Header";
-import {
-  BookOpen,
-  ExternalLink,
-  Folder,
-  FolderIcon,
-  Loader,
-  Loader2,
-  PackageOpenIcon,
-} from "lucide-react";
+import { ExternalLink, FolderIcon, Loader2 } from "lucide-react";
 import { useData } from "@/context/DataProvider";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
 export default function Projects() {
   const { projects, loading } = useData(); // Access projects and loading state from context
   const [visibleProjects, setVisibleProjects] = useState(6); // Initially show 3 projects
@@ -43,7 +29,12 @@ export default function Projects() {
           <Loader2 className="animate-spin" />
         </div>
       ) : (
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           {projects.slice(0, visibleProjects).map((project, index) => (
             <Card key={project.sys.id} className="flex flex-col">
               <CardContent className="flex-grow py-4">
@@ -69,10 +60,7 @@ export default function Projects() {
                 <h2 className="text-lg font-semibold text-textLight">
                   {project.fields.title}
                 </h2>
-                <p>
-                  It highlights the main features and technologies used. This is
-                  a brief description of the project.
-                </p>
+                <p>{project.fields.description}</p>
                 <div className="w-full flex flex-wrap gap-2 mt-2">
                   {project.fields.techStack.map((tech, techIndex) => (
                     <Badge key={techIndex}>{tech}</Badge>
@@ -81,7 +69,7 @@ export default function Projects() {
               </CardContent>
             </Card>
           ))}
-        </div>
+        </motion.div>
       )}
 
       {visibleProjects < projects.length && (

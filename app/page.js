@@ -8,8 +8,7 @@ import Hero from "@/components/Hero";
 import LeftSide from "@/components/LeftSide";
 import Projects from "@/components/Projects";
 import RightSide from "@/components/RightSide";
-import CareerRoadmap from "@/components/Roadmap";
-import Work from "@/components/Work";
+import Skills from "@/components/Skills";
 
 const Home = () => {
   return (
@@ -22,7 +21,8 @@ const Home = () => {
         <FeaturedProject />
         <Projects />
         <Certificates />
-        <Work />
+        <Skills />
+        {/* <Work /> */}
         {/* <CareerRoadmap /> */}
         <Contact />
         <Footer />

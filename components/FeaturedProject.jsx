@@ -3,6 +3,7 @@ import Image from "next/image";
 import Header from "./Header";
 import { Badge } from "./ui/badge";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   Github,
   Link2,
@@ -29,7 +30,12 @@ const FeaturedProject = () => {
           <Loader2 className="animate-spin" />
         </div>
       ) : (
-        <div className="flex flex-col items-center justify-center gap-10 mt-10">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col items-center justify-center gap-10 mt-10"
+        >
           {projects.slice(0, 3).map((project, index) => (
             <div
               key={project.sys.id}
@@ -72,11 +78,7 @@ const FeaturedProject = () => {
                     )}
                   >
                     <p className="line-clamp-3 text-sm md:text-base text-textLight">
-                      This is a brief description of the project. It highlights
-                      the main features and technologies used. This is a brief
-                      description of the project. It highlights the main
-                      features and technologies used. This is a brief
-                      description of the project.
+                      {project.fields.description}
                     </p>
                   </span>
                   <div className="flex flex-wrap gap-2">
@@ -114,7 +116,7 @@ const FeaturedProject = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       )}
     </section>
   );

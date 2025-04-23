@@ -14,7 +14,7 @@ const navItems = [
   { href: "#Home", title: "Home" },
   { href: "#Featured", title: "Featured" },
   { href: "#Projects", title: "Projects" },
-  { href: "#Certs", title: "Certs" },
+  { href: "#Skills", title: "Skills" },
   { href: "https://github.com/Yves-Developer", title: "About" },
 ];
 

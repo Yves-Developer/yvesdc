@@ -1,30 +1,27 @@
-// app/contentful/route.js
+// app/api/content/route.js
+import { createClient } from "contentful";
+import { NextResponse } from "next/server";
 
-import { createClient } from 'contentful';
+export const fetchCache = "force-cache"; // This enables static caching behavior
+export const revalidate = 60; // Revalidate every 60 seconds
 
 const client = createClient({
   space: "laef1csaxq5g",
-  environment: 'master', // defaults to 'master' if not set
+  environment: "master",
   accessToken: "LwT9I5bppN4KJ-61LzyzSinuf0kYRcjViKvmAeNPfMI",
 });
 
 export async function GET() {
   try {
-    // Fetch all entries
     const entries = await client.getEntries();
 
-    // Return the entries data as JSON response
-    return new Response(JSON.stringify(entries), {
+    return NextResponse.json(entries, {
       status: 200,
-      headers: {
-        'Content-Type': 'application/json',
-      },
     });
   } catch (error) {
-    // Handle errors if the API call fails
     console.error(error);
-    return new Response(
-      JSON.stringify({ message: 'Error fetching data from Contentful' }),
+    return NextResponse.json(
+      { message: "Error fetching data from Contentful" },
       { status: 500 }
     );
   }
