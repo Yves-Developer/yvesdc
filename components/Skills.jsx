@@ -4,6 +4,7 @@ import Header from "./Header";
 import RadialProgress from "./RadialProgress";
 import { Button } from "./ui/button";
 import { usePlausible } from "next-plausible";
+
 const mainSkills = [
   { skill: "HTML", percent: 95 },
   { skill: "CSS", percent: 93 },
@@ -23,6 +24,7 @@ const mainSkills = [
   { skill: "React Native", percent: 60 },
 ];
 const Skills = () => {
+  const plausible = usePlausible();
   const [numberPerPage, setNumberPerPage] = useState(8);
   return (
     <section
@@ -53,8 +55,8 @@ const Skills = () => {
             size="lg"
             variant="outline"
             onClick={() => {
-              usePlausible("Load_More_Skills");
               setNumberPerPage((prevVisible) => prevVisible + 8);
+              plausible("Load_More_Skills");
             }}
           >
             Load More

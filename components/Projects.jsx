@@ -13,10 +13,10 @@ import { usePlausible } from "next-plausible";
 export default function Projects() {
   const { projects, loading } = useData(); // Access projects and loading state from context
   const [visibleProjects, setVisibleProjects] = useState(6); // Initially show 3 projects
-
+  const plausible = usePlausible(); // Initialize Plausible tracking
   const handleLoadMore = () => {
-    usePlausible("Load_More_Projects"); // Track the event with Plausible
     setVisibleProjects((prevVisible) => prevVisible + 3); // Show 3 more projects
+    plausible("Load_More_Projects"); // Track the event with Plausible
   };
 
   return (
