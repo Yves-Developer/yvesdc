@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Header from "./Header";
 import RadialProgress from "./RadialProgress";
 import { Button } from "./ui/button";
+import { usePlausible } from "next-plausible";
 const mainSkills = [
   { skill: "HTML", percent: 95 },
   { skill: "CSS", percent: 93 },
@@ -51,7 +52,10 @@ const Skills = () => {
           <Button
             size="lg"
             variant="outline"
-            onClick={() => setNumberPerPage((prevVisible) => prevVisible + 8)}
+            onClick={() => {
+              usePlausible("Load_More_Skills");
+              setNumberPerPage((prevVisible) => prevVisible + 8);
+            }}
           >
             Load More
           </Button>

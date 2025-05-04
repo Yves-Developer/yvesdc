@@ -9,11 +9,13 @@ import { ExternalLink, FolderIcon, Loader2 } from "lucide-react";
 import { useData } from "@/context/DataProvider";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { usePlausible } from "next-plausible";
 export default function Projects() {
   const { projects, loading } = useData(); // Access projects and loading state from context
   const [visibleProjects, setVisibleProjects] = useState(6); // Initially show 3 projects
 
   const handleLoadMore = () => {
+    usePlausible("Load_More_Projects"); // Track the event with Plausible
     setVisibleProjects((prevVisible) => prevVisible + 3); // Show 3 more projects
   };
 
