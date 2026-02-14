@@ -15,8 +15,8 @@ const DataProvider = ({ children }) => {
         console.log("Fetched data from Contentful:", data); // Log data to check its structure
 
         // Ensure the data contains items and map them
-        if (data && data.items) {
-          setProjects(data.items); // Set the items array as projects
+        if (data) {
+          setProjects(data); // Set the items array as projects
         } else {
           console.error("Contentful data is not in the expected format:", data);
         }
