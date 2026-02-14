@@ -38,7 +38,7 @@ export default function Projects() {
           className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {projects.slice(0, visibleProjects).map((project, index) => (
-            <Card key={project.sys.id} className="flex flex-col">
+            <Card key={project.id} className="flex flex-col">
               <CardContent className="flex-grow py-4">
                 {/* <Image
                   src={`https:${project.image.fields.file.url}`}
