@@ -41,9 +41,9 @@ export default function Projects() {
             <Card key={project.sys.id} className="flex flex-col">
               <CardContent className="flex-grow py-4">
                 {/* <Image
-                  src={`https:${project.fields.image.fields.file.url}`}
+                  src={`https:${project.image.fields.file.url}`}
                   alt={
-                    project.fields.image.fields.title || project.fields.title
+                    project.image.fields.title || project.title
                   }
                   width={300}
                   height={200}
@@ -52,7 +52,7 @@ export default function Projects() {
                 <div className="text-textLight flex justify-between items-center mb-4">
                   <FolderIcon className="w-12 h-12 text-primary" />
                   <Link
-                    href={project.fields.link}
+                    href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -60,11 +60,11 @@ export default function Projects() {
                   </Link>
                 </div>
                 <h2 className="text-lg font-semibold text-textLight">
-                  {project.fields.title}
+                  {project.title}
                 </h2>
-                <p>{project.fields.description}</p>
+                <p>{project.description}</p>
                 <div className="w-full flex flex-wrap gap-2 mt-2">
-                  {project.fields.techStack.map((tech, techIndex) => (
+                  {project.techStack.map((tech, techIndex) => (
                     <Badge key={techIndex}>{tech}</Badge>
                   ))}
                 </div>
