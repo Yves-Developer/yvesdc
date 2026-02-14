@@ -13,16 +13,21 @@ const client = createClient({
 
 export async function GET() {
   try {
-    const { items } = await client.getEntries();
-    console.log(JSON.stringify(items))
-
-    return NextResponse.json(items, {
-      status: 200,
+    const { items } = await client.getEntries({
+      content_type: "projects", // must match Contentful ID exactly
+      include: 1,              // keep link depth small
     });
+
+    const projects = items.map((item) => ({
+      id: item.sys.id,
+      ...item.fields,
+    }));
+
+    return NextResponse.json(projects);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return NextResponse.json(
-      { message: "Error fetching data from Contentful" },
+      { message: "Error fetching project data" },
       { status: 500 }
     );
   }
