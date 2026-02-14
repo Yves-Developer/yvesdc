@@ -14,7 +14,7 @@ const client = createClient({
 export async function GET() {
   try {
     const entries = await client.getEntries();
-    console.log(entries)
+    console.log(JSON.stringify(entries))
 
     return NextResponse.json(entries, {
       status: 200,
