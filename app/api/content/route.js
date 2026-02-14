@@ -13,10 +13,10 @@ const client = createClient({
 
 export async function GET() {
   try {
-    const entries = await client.getEntries();
-    console.log(JSON.stringify(entries))
+    const { items } = await client.getEntries();
+    console.log(JSON.stringify(items))
 
-    return NextResponse.json(entries, {
+    return NextResponse.json(items, {
       status: 200,
     });
   } catch (error) {
