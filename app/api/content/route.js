@@ -6,9 +6,9 @@ export const fetchCache = "force-cache"; // This enables static caching behavior
 export const revalidate = 60; // Revalidate every 60 seconds
 
 const client = createClient({
-  space: "laef1csaxq5g",
-  environment: "master",
-  accessToken: "LwT9I5bppN4KJ-61LzyzSinuf0kYRcjViKvmAeNPfMI",
+  space: process.env.CONTENTFUL_SPACE_ID,
+  environment: process.env.CONTENTFUL_ENVIRONMENT,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 });
 
 export async function GET() {
