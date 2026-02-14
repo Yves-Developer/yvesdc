@@ -14,12 +14,13 @@ const client = createClient({
 export async function GET() {
   try {
     const entries = await client.getEntries();
+    console.log(entries)
 
     return NextResponse.json(entries, {
       status: 200,
     });
   } catch (error) {
-    console.error(error);
+    console.log(error);
     return NextResponse.json(
       { message: "Error fetching data from Contentful" },
       { status: 500 }
