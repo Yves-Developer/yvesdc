@@ -38,7 +38,7 @@ const FeaturedProject = () => {
         >
           {projects.slice(0, 3).map((project, index) => (
             <div
-              key={project.sys.id}
+              key={project.id}
               className="w-full flex flex-col items-center justify-center gap-28 mt-10"
             >
               <div
@@ -50,10 +50,10 @@ const FeaturedProject = () => {
                 <a className="w-full h-full md:w-1/2 relative" href={"/"}>
                   <div className="w-full h-full">
                     <Image
-                      src={`https:${project.fields.image.fields.file.url}`}
+                      src={`https:${project.image.fields.file.url}`}
                       alt={
-                        project.fields.image.fields.title ||
-                        project.fields.title
+                        project.image.fields.title ||
+                        project.title
                       }
                       width={1200}
                       height={1200}
@@ -69,7 +69,7 @@ const FeaturedProject = () => {
                   )}
                 >
                   <h2 className="text-lg font-semibold text-primary">
-                    {project.fields.title}
+                    {project.title}
                   </h2>
                   <span
                     className={clsx(
@@ -78,19 +78,19 @@ const FeaturedProject = () => {
                     )}
                   >
                     <p className="line-clamp-3 text-sm md:text-base text-textLight">
-                      {project.fields.description}
+                      {project.description}
                     </p>
                   </span>
                   <div className="flex flex-wrap gap-2">
-                    {project.fields.techStack.map((tech, techIndex) => (
+                    {project.techStack.map((tech, techIndex) => (
                       <Badge key={techIndex}>{tech}</Badge>
                     ))}
                   </div>
                   <div className="flex gap-3 px-6 ">
                     <Link
                       href={
-                        project.fields.link.includes("github.com")
-                          ? project.fields.link
+                        project.link.includes("github.com")
+                          ? project.link
                           : "https://github.com/Yves-Developer"
                       }
                       className="hover:text-primary p-2 bg-[#112240] rounded-md"
@@ -101,8 +101,8 @@ const FeaturedProject = () => {
                     </Link>
                     <Link
                       href={
-                        !project.fields.link.includes("github.com")
-                          ? project.fields.link
+                        !project.link.includes("github.com")
+                          ? project.link
                           : "https://github.com/Yves-Developer"
                       }
                       target="_blank"
