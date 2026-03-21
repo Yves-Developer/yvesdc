@@ -122,7 +122,7 @@ const Hero = () => {
             className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-primary/10"
           >
             <Image
-              src="/Herox.jpg"
+              src="/Herox.jpeg"
               alt="Hero illustration"
               width={1280}
               height={720}
