@@ -121,14 +121,14 @@ const Hero = () => {
             transition={{ duration: 1 }}
             className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-primary/10"
           >
-            <Image
+            {/* <Image
               src="/Herox.jpeg"
               alt="Hero illustration"
               width={1280}
               height={720}
               className="object-cover shadow rounded-lg ring-1 ring-primary/10"
               quality="100"
-            />
+            /> */}
             <div className="absolute inset-0 bg-gradient-to-b from-background/30 to-background rounded-lg"></div>
           </motion.div>
         </div>
