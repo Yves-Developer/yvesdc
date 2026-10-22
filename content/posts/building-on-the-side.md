@@ -6,7 +6,7 @@ date: 2026-10-23
 
 I write software for a living. Then I close the work laptop, open my own, and keep going.
 
-That sounds like a lot. It isn't, if you're honest about how little time you actually have. A few focused hours a week is the real budget. Everything else follows from that.
+That sounds like a lot. It isn't, if you're honest about how little time you actually have. Right now that time goes into [Castfy](https://castfy.app), which I'm building in public. A few focused hours a week is the real budget. Everything else follows from that.
 
 ## Scope is the whole game
 
@@ -23,6 +23,10 @@ An hour that ends with something shipped beats three hours that end with a half-
 ## Pick boring tools
 
 The day job already gives me enough new problems. On the side, I use what I know: Next.js, React, Node, Postgres. Boring tools mean my limited time goes into the product, not into learning the stack.
+
+## Ship before it feels ready
+
+I post demos before things are polished and ask people straight up: is this ready for beta? The answers are more useful than another week of polishing alone.
 
 ## Solo is a feature
 
