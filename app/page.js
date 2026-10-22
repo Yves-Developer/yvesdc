@@ -1,6 +1,4 @@
-import ExperienceList from "@/components/ExperienceList";
 import Footer from "@/components/Footer";
-import HomeTabs from "@/components/HomeTabs";
 import Intro from "@/components/Intro";
 import ProjectList from "@/components/ProjectList";
 import { getProjects } from "@/lib/contentful";
@@ -13,10 +11,15 @@ export default async function Home() {
   return (
     <main className="mx-auto w-full max-w-[640px] px-5 py-16 sm:py-24">
       <Intro />
-      <HomeTabs
-        projects={<ProjectList projects={projects} />}
-        experience={<ExperienceList />}
-      />
+      <section className="mt-14" aria-labelledby="projects-heading">
+        <h2
+          id="projects-heading"
+          className="mb-4 font-medium text-muted-light text-sm"
+        >
+          Projects
+        </h2>
+        <ProjectList projects={projects} />
+      </section>
       <Footer />
     </main>
   );
