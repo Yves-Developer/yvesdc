@@ -1,37 +1,26 @@
-/** @format */
-
-import Certificates from "@/components/Certificates";
-import Contact from "@/components/contact";
-import FeaturedProject from "@/components/FeaturedProject";
 import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import LeftSide from "@/components/LeftSide";
-import Projects from "@/components/Projects";
-import RightSide from "@/components/RightSide";
-import Skills from "@/components/Skills";
+import Intro from "@/components/Intro";
+import ProjectList from "@/components/ProjectList";
+import { getProjects } from "@/lib/contentful";
 
-const Home = () => {
+export const revalidate = 60;
+
+export default async function Home() {
+  const projects = await getProjects();
+
   return (
-    <main className="w-full h-[90vh] xl:flex justify-between items-center gap-20">
-      <div className="w-32 h-full hidden xl:inline-flex fixed bottom-0 left-0">
-        <LeftSide />
-      </div>
-      <div className="h-[90vh] mx-auto p-4">
-        <Hero />
-        <FeaturedProject />
-        <Projects />
-        {/* <Certificates /> */}
-        <Skills />
-        {/* <Work /> */}
-        {/* <CareerRoadmap /> */}
-        <Contact />
-        <Footer />
-      </div>
-      <div className="w-32 h-full hidden xl:inline-flex fixed bottom-0 right-0">
-        <RightSide />
-      </div>
+    <main className="mx-auto w-full max-w-[640px] px-5 py-16 sm:py-24">
+      <Intro />
+      <section className="mt-14" aria-labelledby="projects-heading">
+        <h2
+          id="projects-heading"
+          className="mb-4 font-medium text-muted-light text-sm"
+        >
+          Projects
+        </h2>
+        <ProjectList projects={projects} />
+      </section>
+      <Footer />
     </main>
   );
-};
-
-export default Home;
+}

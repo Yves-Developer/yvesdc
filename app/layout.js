@@ -1,21 +1,34 @@
-/** @format */
-
-import Navbar from "@/components/Navbar";
-import "./globals.css";
-import DataProvider from "@/context/DataProvider";
+import { Inter, Instrument_Serif } from "next/font/google";
 import PlausibleProvider from "next-plausible";
+import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-serif",
+});
+
 export const metadata = {
-  title: `Yves DC, Portfolio Websites - ${new Date().getFullYear()}`,
-  description: "All made projects from 2021",
+  title: "MUGISHA Yves — Software Engineer",
+  description:
+    "Software engineer and solo developer. Currently building Castfy.",
+  openGraph: {
+    title: "MUGISHA Yves — Software Engineer",
+    description:
+      "Software engineer and solo developer. Currently building Castfy.",
+    url: "https://yvesdc.vercel.app",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable}`}>
       <body>
         <PlausibleProvider domain="yvesdc.vercel.app" trackOutboundLinks={true}>
-          <Navbar />
-          <DataProvider>{children}</DataProvider>
+          {children}
         </PlausibleProvider>
       </body>
     </html>
