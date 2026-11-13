@@ -6,15 +6,8 @@
     .head { fill: #a3a3a3; }
     .box { fill: none; stroke: #a3a3a3; stroke-width: 1.25; }
     .accent { fill: #2563eb; fill-opacity: 0.12; stroke: #2563eb; stroke-width: 2; }
-    @media (prefers-color-scheme: dark) {
-      .ink { fill: #f5f5f5; }
-      .quiet { fill: #a3a3a3; }
-      .edge { stroke: #737373; }
-      .head { fill: #737373; }
-      .box { stroke: #737373; }
-      .accent { fill: #60a5fa; stroke: #60a5fa; }
-    }
   </style>
+  <rect x="0.5" y="0.5" width="759" height="299" rx="12" fill="#ffffff" stroke="#e5e5e5"/>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path class="head" d="M0 0L10 5L0 10z"/>
