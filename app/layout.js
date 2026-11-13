@@ -11,6 +11,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://yves.castfy.app"),
   title: "MUGISHA Yves — Software Engineer",
   description:
     "Software engineer and solo developer. Currently building Castfy.",
@@ -18,8 +19,12 @@ export const metadata = {
     title: "MUGISHA Yves — Software Engineer",
     description:
       "Software engineer and solo developer. Currently building Castfy.",
-    url: "https://yvesdc.vercel.app",
+    url: "/",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@YvesDC0",
   },
 };
 

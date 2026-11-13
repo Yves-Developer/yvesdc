@@ -24,6 +24,7 @@ export async function generateMetadata({ params }) {
       title: post.title,
       description: post.description,
       type: "article",
+      url: `/blog/${slug}`,
       publishedTime: post.date.toISOString(),
     },
   };
