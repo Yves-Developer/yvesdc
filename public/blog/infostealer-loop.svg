@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-label="The MrBeast image is the last step of a loop that starts on your PC" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="13">
+  <style>
+    .ink { fill: #171717; }
+    .quiet { fill: #525252; }
+    .edge { stroke: #a3a3a3; }
+    .head { fill: #a3a3a3; }
+    .box { fill: none; stroke: #a3a3a3; stroke-width: 1.25; }
+    .accent { fill: #2563eb; fill-opacity: 0.12; stroke: #2563eb; stroke-width: 2; }
+    @media (prefers-color-scheme: dark) {
+      .ink { fill: #f5f5f5; }
+      .quiet { fill: #a3a3a3; }
+      .edge { stroke: #737373; }
+      .head { fill: #737373; }
+      .box { stroke: #737373; }
+      .accent { fill: #60a5fa; stroke: #60a5fa; }
+    }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path class="head" d="M0 0L10 5L0 10z"/>
+    </marker>
+  </defs>
+  <text class="ink" x="24" y="34" font-size="15" font-weight="600">The MrBeast image is the last step of a loop that starts on your PC</text>
+  <g class="edge" fill="none" stroke-width="1.25">
+    <path d="M224 104H280" marker-end="url(#arrow)"/>
+    <path d="M480 104H536" marker-end="url(#arrow)"/>
+    <path d="M636 132V208" marker-end="url(#arrow)"/>
+    <path d="M536 236H480" marker-end="url(#arrow)"/>
+    <path d="M280 236H224" marker-end="url(#arrow)"/>
+    <path d="M124 208V132" marker-end="url(#arrow)"/>
+  </g>
+  <rect class="box" x="24" y="76" width="200" height="56" rx="8"/>
+  <text class="ink" x="124" y="100" text-anchor="middle" font-weight="600">Traffer posts bait</text>
+  <text class="quiet" x="124" y="118" text-anchor="middle" font-size="11.5">crack, cheat, pasted command</text>
+  <rect class="box" x="280" y="76" width="200" height="56" rx="8"/>
+  <text class="ink" x="380" y="100" text-anchor="middle" font-weight="600">You run it</text>
+  <text class="quiet" x="380" y="118" text-anchor="middle" font-size="11.5">one click or one paste</text>
+  <rect class="box" x="536" y="76" width="200" height="56" rx="8"/>
+  <text class="ink" x="636" y="100" text-anchor="middle" font-weight="600">Stealer copies sessions</text>
+  <text class="quiet" x="636" y="118" text-anchor="middle" font-size="11.5">cookies, passwords, tokens</text>
+  <rect class="box" x="536" y="208" width="200" height="56" rx="8"/>
+  <text class="ink" x="636" y="232" text-anchor="middle" font-weight="600">Log is sold</text>
+  <text class="quiet" x="636" y="250" text-anchor="middle" font-size="11.5">Telegram, dark web markets</text>
+  <rect class="box" x="280" y="208" width="200" height="56" rx="8"/>
+  <text class="ink" x="380" y="232" text-anchor="middle" font-weight="600">Bots replay sessions</text>
+  <text class="quiet" x="380" y="250" text-anchor="middle" font-size="11.5">no password, no MFA prompt</text>
+  <rect class="accent" x="24" y="208" width="200" height="56" rx="8"/>
+  <text class="ink" x="124" y="232" text-anchor="middle" font-weight="600">Four-image scam sent</text>
+  <text class="quiet" x="124" y="250" text-anchor="middle" font-size="11.5">to every friend and server</text>
+  <text class="quiet" x="136" y="174" font-size="11.5">lured friends get infected</text>
+</svg>
