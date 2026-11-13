@@ -1,5 +1,7 @@
 import { Inter, Instrument_Serif } from "next/font/google";
 import PlausibleProvider from "next-plausible";
+import ThemeToggle from "@/components/ThemeToggle";
+import { themeScript } from "@/lib/theme";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -30,8 +32,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${instrumentSerif.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
+        <ThemeToggle />
         <PlausibleProvider domain="yvesdc.vercel.app" trackOutboundLinks={true}>
           {children}
         </PlausibleProvider>

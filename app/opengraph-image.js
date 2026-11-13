@@ -7,8 +7,10 @@ export const contentType = "image/png";
 
 export default function Image() {
   return renderOgImage({
-    title: "Software engineer and solo developer. Currently building Castfy.",
-    eyebrow: "yves.castfy.app",
+    title: "I write software, and build my own products on the side.",
+    badge: "Software Engineer · Building Castfy",
+    description: "Solo, from first commit to launch. Notes on what I build and what I learn shipping it.",
+    url: "yves.castfy.app",
     seed: "home",
   });
 }

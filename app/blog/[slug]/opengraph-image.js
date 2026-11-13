@@ -15,10 +15,11 @@ export default async function Image({ params }) {
 
   return renderOgImage({
     title: post?.title ?? "Blog",
-    eyebrow: "yves.castfy.app/blog",
-    meta: post
-      ? `${formatDate(post.date)} · ${post.readingMinutes} min read`
-      : undefined,
+    badge: post
+      ? `Blog · ${formatDate(post.date)} · ${post.readingMinutes} min read`
+      : "Blog",
+    description: post?.description,
+    url: `yves.castfy.app/blog/${slug}`,
     seed: slug,
   });
 }
